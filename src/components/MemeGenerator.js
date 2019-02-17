@@ -20,9 +20,10 @@ class MemeGenerator extends React.Component {
     });
   }
 
-  onClickHandler() {
+  onClickHandler(event) {
+    event.preventDefault();
     const min = 1;
-    const max = 100;
+    const max = this.state.allMemeImg.length;
     const rand = Math.floor(Math.random() * (max - min + 1) + min);
     console.log(rand);
     console.log(this.state.allMemeImg[rand]);
@@ -44,11 +45,11 @@ class MemeGenerator extends React.Component {
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.onClickHandler}>
           <input name="top" onChange={this.handlerChange} />
           <input name="bottom" onChange={this.handlerChange} />
+          <button> Gen </button>
         </form>
-        <button onClick={this.onClickHandler}> Gen </button>
         <h1>{this.state.top} </h1>
         <img src={this.state.image} />
         <h1>{this.state.bottom} </h1>

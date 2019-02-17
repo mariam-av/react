@@ -9,18 +9,16 @@ class MemeGenerator extends React.Component {
       image: "https://i.imgflip.com/1bij.jpg",
       allMemeImg: []
     };
-    this.handlerChange = this.handlerChange.bind(this);
-    this.onClickHandler = this.onClickHandler.bind(this);
   }
 
-  handlerChange(event) {
+  handlerChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
-  }
+  };
 
-  onClickHandler(event) {
+  onClickHandler = event => {
     event.preventDefault();
     const min = 1;
     const max = this.state.allMemeImg.length;
@@ -31,7 +29,7 @@ class MemeGenerator extends React.Component {
       image: this.state.allMemeImg[rand].url
     });
     console.log(this.state.image);
-  }
+  };
   componentDidMount() {
     fetch("https://api.imgflip.com/get_memes")
       .then(response => response.json())

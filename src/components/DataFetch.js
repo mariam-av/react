@@ -8,16 +8,16 @@ class DataFetch extends Component {
     };
   }
 
-  componentDidMount() {
-    fetch("https://swapi.co/api/people/1/")
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        this.setState({
-          people: data
-        });
-      });
-  }
+  // componentDidMount() {
+  //   fetch("https://swapi.co/api/people/1/")
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log(data);
+  //       this.setState({
+  //         people: data
+  //       });
+  //     });
+  // }
 
   render() {
     return <div>{this.state.people.height}</div>;

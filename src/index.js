@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-import App from "./components/FormsApp";
+import App from "./components/MemeGeneratorApp";
 
 ReactDom.render(<App />, document.getElementById("root"));

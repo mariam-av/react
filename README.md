@@ -1,5 +1,7 @@
 # react
 Created with CodeSandbox
-1.cd src/main
-2.npm install -g npx
-3.npx create-react-app  appName
+<br/>1.cd src/main
+<br/>2.npm install -g npx
+<br/>3.npx create-react-app  appName
+<br/>4.cd src/main/appName
+<br/>5. yarn run start
